@@ -6,7 +6,7 @@ WORKDIR /ws-scrcpy
 
 RUN npm install -g node-gyp
 RUN apt update;apt install android-tools-adb -y
-RUN git clone https://github.com/drauggres/ws-scrcpy/tree/bug/android_13.git .
+RUN git clone --branch bug/android_13 --single-branch https://github.com/drauggres/ws-scrcpy.git
 RUN npm install
 RUN npm run dist
 
